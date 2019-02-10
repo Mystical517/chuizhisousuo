@@ -1,1 +1,15 @@
-Hello,World!
+<view class="weui-cells__title">垂直搜索</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">关键词</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入关键词"/>
+                </view>
+            </view> 
+          </view>
+   <view class="page__bd page__bd_spacing">
+  <view></view>
+        <button class="weui-btn" type="primary">搜索</button>
+    </view>
