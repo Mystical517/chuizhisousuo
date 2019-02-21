@@ -1,0 +1,13 @@
+<!--pages/index/music_search.wxml-->
+    <view class='list-head'>下载地址（点击链接可复制）</view>
+    <view class='list-head'>-------------------</view>
+<view class='list-box'>
+    <view class='list-li mflex'  wx:for="{{list_data}}"  wx:key="index" > 
+       <view  class='list-tit'><text>曲名：{{item.title}}</text></view>
+        <view  class='list-tit'><text>歌手：{{item.author}}</text></view> 
+        <view  class='list-tit' bindtap='fz'><text>下载地址：
+        </text><input class="input" value='{{item.url}}'
+bindinput="fz " /></view>
+        <view>----------------------------------</view>      
+    </view>
+</view>
