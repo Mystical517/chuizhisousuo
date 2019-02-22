@@ -1,15 +1,31 @@
-<view class="weui-cells__title">垂直搜索</view>
+<view class="weui-cells__title">音乐搜索</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">关键词</view>
+                    <view class="weui-label">音乐名</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input" placeholder="请输入关键词"/>
+                    <input class="weui-input" placeholder="请输入关键词" bindinput='setmusicname'/>
                 </view>
             </view> 
           </view>
    <view class="page__bd page__bd_spacing">
   <view></view>
-        <button class="weui-btn" type="primary">搜索</button>
+        <button class="weui-btn" type="primary" bindtap='music_search'>搜索</button>
+    </view>
+
+<view class="weui-cells__title">电影搜索</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">电影名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入关键词" bindinput='setmoviename'/>
+                </view>
+            </view> 
+          </view>
+   <view class="page__bd page__bd_spacing">
+  <view></view>
+        <button class="weui-btn" type="primary" bindtap='movie_search'>搜索</button>
     </view>

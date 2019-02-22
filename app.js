@@ -9,6 +9,8 @@ App({
         console.log('App Hide')
     },
     globalData: {
-        hasLogin: false
+        hasLogin: false,
+        music_list_data:'',
+        movie_list_data:''
     }
 });
