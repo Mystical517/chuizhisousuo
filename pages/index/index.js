@@ -28,7 +28,7 @@ Page(
           var app=getApp()
           app.globalData.music_list_data=res.data
           wx.navigateTo({
-            url: 'music_search'
+            url: '/pages/music/music_search'
           })
         }
       })
@@ -47,7 +47,7 @@ Page(
           app.globalData.movie_list_data = res.data
           console.log(res.data)
           wx.navigateTo({
-            url: 'movie_search'
+            url: '/pages/movie/movie_search'
           })
         }
       })

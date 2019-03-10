@@ -11,9 +11,9 @@
 		"newFeature": true,
 		"autoAudits": false
 	},
-	"compileType": "miniprogram",
+	"compileType": "plugin",
 	"libVersion": "2.0.4",
-	"appid": "wx56b79188027f7bdd",
+	"appid": "wxe19db2bc4d3725b5",
 	"projectname": "%E5%9E%82%E7%9B%B4%E6%90%9C%E7%B4%A2",
 	"debugOptions": {
 		"hidedInDevtools": []

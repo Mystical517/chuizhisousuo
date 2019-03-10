@@ -2,13 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/index/music_search",
-    "pages/index/movie_search"
+    "pages/music/music_search",
+    "pages/movie/movie_search",
+    "pages/index2"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#808000",
+    "navigationBarTitleText": "垂直搜索",
+    "navigationBarTextStyle": "white"
   }
 }
