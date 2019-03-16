@@ -1,9 +1,27 @@
 Page(
   {
     data:{
-      music_name:'',
-      list_data:[]
+      list_data:[],
+      se:'',
+      select:[
+        {id:1,name:"音乐"},
+        {id:2,name:"电影"}
+      ],
+      position: 'left',
+      current: '',
+
+
     },
+    setse: function (e) {
+
+      this.setData({
+
+        se: e.detail.detail.value
+
+      })
+
+    },
+    
     setmusicname:function(e){
       this.setData({
         music_name: e.detail.value
@@ -16,7 +34,7 @@ Page(
       })
     }
     ,
-    music_search: function () {
+    /*music_search: function () {
       var str_data=''
       var that = this//不要漏了这句，很重要
       wx.request({
@@ -52,10 +70,56 @@ Page(
         }
       })
     }
+    ,*/
+    selectchange: function ({ detail = {} }){
+      this.setData({
+        current: detail.value
+      });
+
+    }
+  ,
+    search:function(){
+      var str_data = ''
+      var that = this
+      console.log(that.data.se)
+      if (that.data.current === "音乐") {
+        wx.request({
+          url: 'http://101.132.132.129:5000/music/' + that.data.se,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          success: function (res) {
+            var app = getApp()
+            app.globalData.music_list_data = res.data
+            wx.navigateTo({
+              url: '/pages/music/music_search'
+            })
+          }
+        })
+
+      }
+      else if (that.data.current === "电影") {
+        wx.request({
+          url: 'http://101.132.132.129:5000/movie/' + that.data.se,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          success: function (res) {
+            var app = getApp()
+            app.globalData.music_list_data = res.data
+            wx.navigateTo({
+              url: '/pages/music/movie_search'
+            })
+          }
+        })
+
+      }
+    }
   ,/**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   
     
   },
 

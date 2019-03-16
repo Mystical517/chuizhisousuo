@@ -4,7 +4,7 @@
     "pages/logs/logs",
     "pages/music/music_search",
     "pages/movie/movie_search"
-    
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
