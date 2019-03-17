@@ -1,3 +1,4 @@
+<!--
 <view class="weui-cells__title">音乐搜索</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
@@ -9,9 +10,10 @@
                 </view>
             </view> 
           </view>
-   <view class="page__bd page__bd_spacing">
-  <view></view>
-        <button class="weui-btn" type="primary" bindtap='music_search'>搜索</button>
+          <view class="page__bd page__bd_spacing">
+          <view></view>
+  
+       <button class="weui-btn" type="primary" bindtap='music_search'>搜索</button>
     </view>
 
 <view class="weui-cells__title">电影搜索</view>
@@ -27,5 +29,20 @@
           </view>
    <view class="page__bd page__bd_spacing">
   <view></view>
-        <button class="weui-btn" type="primary" bindtap='movie_search'>搜索</button>
-    </view>
+        
+        <i-button type="info" bind:click="handleClick" shape='circle'          bindtap='movie_search' >搜索</i-button>
+-->
+        <i-input type="text" placeholder="输入你想要的查找的内容" bind:change="setse" />
+
+        <i-button type="info" bind:click="handleClick" shape='circle' bindtap='search'>搜索</i-button>
+
+ <i-panel title="选项">
+
+    <i-radio-group bindchange="selectchange" current="{{current}}">
+
+        <i-radio wx:for="{{select}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}">
+        </i-radio>
+    </i-radio-group>
+</i-panel>
+    
+   
